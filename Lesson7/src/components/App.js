@@ -12,8 +12,8 @@ class App extends React.Component {
                 {
                     name: "Sue",
                     age: 30,
-                    bio: 'enjoy',
-                    hobbies: ['eee', 'aaa']
+                    bio: 'enjoys long walks',
+                    hobbies: ['tv', 'bike']
                 },
                 {
                     name: "Tom",
