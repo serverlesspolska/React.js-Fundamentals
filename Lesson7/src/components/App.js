@@ -6,7 +6,7 @@ import AddProfile from './AddProfile'
 
 class App extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             profiles: [
                 {
@@ -18,11 +18,11 @@ class App extends React.Component {
                 {
                     name: "Tom",
                     age: 21,
-                    bio: 'enjoy',
-                    hobbies: ['ccc', 'ddd']
+                    bio: 'enjoys mountains',
+                    hobbies: ['snowboarding', 'ski']
                 }
             ]
-        }
+        };
         this.addUser = this.addUser.bind(this)
     }
 
@@ -40,7 +40,7 @@ class App extends React.Component {
                     bio={profile.bio}
                     hobbies={profile.hobbies} />
             )
-        })
+        });
         return (
             <div>
                 {profiles}
