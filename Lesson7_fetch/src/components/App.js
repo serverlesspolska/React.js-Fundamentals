@@ -31,6 +31,7 @@ class App extends React.Component {
         let profiles = this.state.profiles.map(profile => {
             return (
                 <Profile
+                    key={profile.id}
                     id={profile.id}
                     name={profile.name}
                     username={profile.username}

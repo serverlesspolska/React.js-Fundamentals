@@ -1,7 +1,10 @@
 import React from 'react'
 
+let logs= () => console.log("profile rendered")
 let Profile = props => (
-    <div key={props.id}>
+
+    <div>
+        {logs()}
         <h2>{props.name}</h2>
         <p>
             Username: {props.username} with an email {props.email} and website {props.website}
