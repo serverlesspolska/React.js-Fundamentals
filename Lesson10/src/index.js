@@ -13,22 +13,21 @@ class App extends React.Component {
         this.onChange = this.onChange.bind(this)
     }
 
-    componentDidMount(){
+    componentDidMount() {
         TodoStore.addChangeListener(this.onChange)
     }
 
-    componentWillUnmount(){
+    componentWillUnmount() {
         TodoStore.removeListener(this.onChange)
     }
-    onChange (){
+
+    onChange() {
         this.setState({count: TodoStore.getCount()})
     }
 
     increment() {
         incrementActions.incrementCount()
     }
-
-
 
     render() {
         return (
