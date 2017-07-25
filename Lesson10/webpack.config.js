@@ -1,20 +1,27 @@
 var path = require('path');
 var webpack = require('webpack');
 
+var BUILD_DIR = path.resolve(__dirname + '/target')
+var SOURCE_DIR = path.resolve(__dirname + '/src')
+
 module.exports = {
     devServer: {
         inline: true,
-        contentBase: __dirname + '/target',
+        contentBase: BUILD_DIR,
         port: 3000
     },
     devtool: 'cheap-module-eval-source-map',
-    entry: __dirname + '/src/index.js',
+    entry: SOURCE_DIR + '/index.js',
     module: {
         loaders: [
             {
                 test: /\.js$/,
-                loaders: ['babel-loader'],
-                exclude: /node_modules/
+                loader: 'babel-loader',
+                include: SOURCE_DIR,
+                exclude: /node_modules/,
+                query: {
+                    presets: ['es2015','react']
+                }
             },
             {
                 test: /\.scss/,
@@ -23,7 +30,7 @@ module.exports = {
         ]
     },
     output: {
-        path: __dirname + '/target',
+        path: BUILD_DIR,
         filename: 'js/bundle.min.js'
     }
     /*
