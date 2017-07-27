@@ -1,9 +1,9 @@
 import React from "react";
 
-let Product = ({id, name, cost, handleClick}) => (
+let Product = ({id, name, cost, handleClick, label}) => (
     <div>
         {name} ${cost}
-        <button onClick={() => handleClick(id)}>Add to cart</button>
+        <button onClick={() => handleClick(id)}>{label}</button>
     </div>
 )
 

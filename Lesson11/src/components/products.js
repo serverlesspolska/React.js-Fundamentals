@@ -8,7 +8,7 @@ let Products = ({products, handleClick}) => (
             {products.map(product =>
                 <Product key={product.id}
                          {...product}
-                         handleClick={handleClick}/>)}
+                         handleClick={handleClick} label="Add to cart"/>)}
         </section>
     </section>
 )
