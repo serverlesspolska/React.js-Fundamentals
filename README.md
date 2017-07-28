@@ -7,7 +7,7 @@ http://techbus.safaribooksonline.com/video/programming/javascript/9780134688671?
 
 To get started, first install all the necessary dependencies.
 ```
-> cd Lesson7
+> cd Lesson[X]
 > npm install
 ```
 
@@ -15,5 +15,9 @@ Start the development server (changes will now update live in browser)
 ```
 > npm run start
 ```
-
 To view your project, go to: [http://localhost:3000/](http://localhost:3000/)
+
+Lesson11 also contains simple reducer test
+```
+> npm run test
+```
